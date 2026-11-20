@@ -1,0 +1,1954 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91看_品牌官网_视频内容社区</title>
+<meta name="description" content="91看官方网站，作为持续运营的视频内容社区，我们致力于为创作者与企业搭建高品质内容生态，提供专业、正版、高清的原创视频与品牌故事，深耕垂直领域，赢得用户口碑。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d1117'/%3E%3Cpath d='M22 18h8v28h-8zm12 0h8l6 14-6 14h-8l6-14z' fill='%2332e6a0'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --k91-bg:#0b0e14;
+    --k91-bg-soft:#111621;
+    --k91-surface:#161d2b;
+    --k91-surface-2:#1c2537;
+    --k91-accent:#32e6a0;
+    --k91-accent-dim:#1f9e6f;
+    --k91-accent-soft:rgba(50,230,160,.12);
+    --k91-text:#e8edf6;
+    --k91-text-muted:#9aa7bd;
+    --k91-border:#25314a;
+    --k91-radius:14px;
+    --k91-radius-sm:10px;
+    --k91-shadow:0 10px 30px rgba(0,0,0,.45);
+    --k91-header-h:116px;
+    --k91-content-max:1180px;
+    --k91-font: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:130px;}
+  body{
+    font-family:var(--k91-font);
+    background:var(--k91-bg);
+    color:var(--k91-text);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  ul{list-style:none;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  input{font-family:inherit;}
+  .k91-container{max-width:var(--k91-content-max);margin:0 auto;padding:0 24px;}
+  .k91-sticky-wrap{position:sticky;top:0;z-index:200;}
+
+  /* ============ 公告条 ============ */
+  .k91-announce{
+    background:linear-gradient(90deg,#153a2c,#0e2a20 60%,#153a2c);
+    border-bottom:1px solid var(--k91-accent-dim);
+    font-size:13px;
+    color:#bdf5dd;
+  }
+  .k91-announce-inner{
+    max-width:var(--k91-content-max);
+    margin:0 auto;
+    padding:9px 24px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .k91-announce-tag{
+    flex:none;
+    background:var(--k91-accent);
+    color:#06110c;
+    font-weight:700;
+    font-size:11px;
+    padding:2px 8px;
+    border-radius:20px;
+    letter-spacing:.5px;
+  }
+  .k91-announce p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+  /* ============ 页头 ============ */
+  .k91-header{
+    background:rgba(11,14,20,.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--k91-border);
+  }
+  .k91-header-inner{
+    max-width:var(--k91-content-max);
+    margin:0 auto;
+    padding:0 24px;
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+  .k91-brand{display:flex;align-items:center;gap:12px;}
+  .k91-brand-logo{
+    width:42px;height:42px;border-radius:12px;
+    background:linear-gradient(135deg,var(--k91-accent),#1f7a5c);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:19px;color:#04130d;
+    box-shadow:0 0 18px rgba(50,230,160,.35);
+    flex:none;
+  }
+  .k91-brand-name{font-weight:800;font-size:20px;letter-spacing:.5px;}
+  .k91-brand-name em{color:var(--k91-accent);font-style:normal;}
+  .k91-brand-sub{font-size:11px;color:var(--k91-text-muted);letter-spacing:2px;margin-top:-2px;}
+
+  .k91-nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+  .k91-nav a{
+    font-size:14px;color:var(--k91-text-muted);
+    padding:8px 12px;border-radius:8px;
+    transition:color .2s,background .2s;
+  }
+  .k91-nav a:hover,.k91-nav a.is-active{color:var(--k91-accent);background:var(--k91-accent-soft);}
+
+  .k91-header-tools{display:flex;align-items:center;gap:12px;}
+  .k91-search{
+    display:flex;align-items:center;gap:8px;
+    background:var(--k91-bg-soft);
+    border:1px solid var(--k91-border);
+    border-radius:24px;
+    padding:6px 8px 6px 14px;
+    transition:border-color .2s;
+  }
+  .k91-search:focus-within{border-color:var(--k91-accent);}
+  .k91-search input{
+    background:none;border:none;outline:none;
+    color:var(--k91-text);font-size:13px;width:130px;
+  }
+  .k91-search input::placeholder{color:#5f6c85;}
+  .k91-search-btn{
+    background:var(--k91-accent);color:#04130d;
+    font-size:12px;font-weight:700;
+    padding:5px 12px;border-radius:18px;
+    transition:filter .2s;
+  }
+  .k91-search-btn:hover{filter:brightness(1.1);}
+  .k91-search-feedback{
+    font-size:12px;color:var(--k91-accent);
+    margin-top:-2px;min-height:0;
+  }
+
+  .k91-nav-toggle{
+    display:none;
+    width:40px;height:40px;border-radius:10px;
+    border:1px solid var(--k91-border);
+    background:var(--k91-bg-soft);
+    flex-direction:column;justify-content:center;align-items:center;gap:5px;
+    flex:none;
+  }
+  .k91-nav-toggle span{width:18px;height:2px;background:var(--k91-text);border-radius:2px;transition:.25s;}
+  .k91-nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .k91-nav-toggle.is-open span:nth-child(2){opacity:0;}
+  .k91-nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .k91-mobile-nav{
+    display:none;
+    border-top:1px solid var(--k91-border);
+    background:var(--k91-bg-soft);
+    padding:10px 24px 18px;
+  }
+  .k91-mobile-nav.is-open{display:block;}
+  .k91-mobile-nav a{
+    display:block;padding:11px 6px;
+    border-bottom:1px solid rgba(255,255,255,.05);
+    font-size:15px;color:var(--k91-text-muted);
+  }
+  .k91-mobile-nav a:last-child{border-bottom:none;}
+
+  /* ============ 通用 section ============ */
+  .k91-section{padding:72px 0;}
+  .k91-section + .k91-section{border-top:1px solid var(--k91-border);}
+  .k91-section-head{margin-bottom:40px;}
+  .k91-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:2px;color:var(--k91-accent);
+    text-transform:uppercase;font-weight:700;margin-bottom:12px;
+  }
+  .k91-eyebrow::before{content:"";width:22px;height:2px;background:var(--k91-accent);border-radius:1px;}
+  .k91-section-head h2{
+    font-size:clamp(22px,3vw,32px);
+    font-weight:800;letter-spacing:.5px;line-height:1.35;
+  }
+  .k91-section-head p{color:var(--k91-text-muted);font-size:14.5px;margin-top:10px;max-width:680px;}
+
+  /* ============ 首屏 ============ */
+  .k91-hero{
+    position:relative;
+    padding:78px 0 68px;
+    overflow:hidden;
+  }
+  .k91-hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background:
+      radial-gradient(900px 420px at 80% -10%,rgba(50,230,160,.16),transparent 60%),
+      radial-gradient(700px 380px at 8% 110%,rgba(64,110,255,.14),transparent 65%);
+    pointer-events:none;
+  }
+  .k91-hero-inner{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:56px;
+    align-items:center;
+  }
+  .k91-hero h1{
+    font-size:clamp(38px,5.4vw,64px);
+    font-weight:900;
+    letter-spacing:2px;
+    line-height:1.1;
+    margin-bottom:18px;
+  }
+  .k91-hero h1 span{
+    background:linear-gradient(100deg,var(--k91-accent),#6ff7c6 60%,#3ad0ff);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .k91-hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:700;letter-spacing:1px;
+    color:var(--k91-accent);
+    background:var(--k91-accent-soft);
+    border:1px solid rgba(50,230,160,.3);
+    padding:6px 14px;border-radius:30px;
+    margin-bottom:22px;
+  }
+  .k91-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--k91-accent);box-shadow:0 0 8px var(--k91-accent);}
+  .k91-hero-lead{
+    font-size:16px;color:var(--k91-text-muted);
+    max-width:520px;margin-bottom:26px;
+  }
+  .k91-hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px;}
+  .k91-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 26px;border-radius:30px;
+    font-size:14.5px;font-weight:700;
+    transition:transform .2s,filter .2s,background .2s;
+  }
+  .k91-btn-primary{
+    background:var(--k91-accent);color:#04130d;
+    box-shadow:0 8px 24px rgba(50,230,160,.28);
+  }
+  .k91-btn-primary:hover{transform:translateY(-2px);filter:brightness(1.06);}
+  .k91-btn-ghost{
+    border:1px solid var(--k91-border);
+    color:var(--k91-text);background:var(--k91-surface);
+  }
+  .k91-btn-ghost:hover{border-color:var(--k91-accent);color:var(--k91-accent);transform:translateY(-2px);}
+
+  .k91-hero-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:14px;max-width:520px;
+  }
+  .k91-stat{
+    background:var(--k91-surface);
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius-sm);
+    padding:16px 14px;
+  }
+  .k91-stat strong{
+    display:block;font-size:24px;font-weight:800;
+    color:var(--k91-accent);letter-spacing:.5px;
+  }
+  .k91-stat span{font-size:12.5px;color:var(--k91-text-muted);}
+
+  .k91-hero-visual{position:relative;}
+  .k91-hero-figure{
+    position:relative;
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid var(--k91-border);
+    box-shadow:var(--k91-shadow);
+    aspect-ratio:16/10;
+  }
+  .k91-hero-figure svg{width:100%;height:100%;}
+  .k91-hero-figure .k91-cover-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(6,10,16,.05) 30%,rgba(6,10,16,.82) 100%);
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:22px;
+  }
+  .k91-cover-overlay strong{font-size:17px;font-weight:800;letter-spacing:.3px;}
+  .k91-cover-overlay small{color:#b9c6dc;font-size:12.5px;}
+  .k91-play-badge{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:64px;height:64px;border-radius:50%;
+    background:rgba(50,230,160,.9);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 0 12px rgba(50,230,160,.16);
+    transition:transform .25s;
+  }
+  .k91-hero-figure:hover .k91-play-badge{transform:translate(-50%,-50%) scale(1.08);}
+  .k91-play-badge::after{
+    content:"";display:block;
+    width:0;height:0;
+    border-left:16px solid #04130d;
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    margin-left:4px;
+  }
+  .k91-hero-float-card{
+    position:absolute;
+    bottom:-26px;right:-14px;
+    background:var(--k91-surface-2);
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius);
+    padding:14px 18px;
+    box-shadow:var(--k91-shadow);
+    display:flex;align-items:center;gap:12px;
+    max-width:280px;
+  }
+  .k91-hero-float-card .k91-mini-avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(135deg,#3ad0ff,#7c5cff);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;color:#06101c;font-size:15px;flex:none;
+  }
+  .k91-hero-float-card p{font-size:12.5px;color:var(--k91-text-muted);line-height:1.5;}
+  .k91-hero-float-card p b{display:block;color:var(--k91-text);font-size:14px;}
+
+  /* ============ 热门视频流 ============ */
+  .k91-filter-row{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+    gap:16px;margin-bottom:30px;
+  }
+  .k91-tags{display:flex;flex-wrap:wrap;gap:10px;}
+  .k91-tag-filter{
+    font-size:13px;color:var(--k91-text-muted);
+    padding:7px 16px;border-radius:20px;
+    border:1px solid var(--k91-border);
+    background:var(--k91-bg-soft);
+    transition:.2s;
+  }
+  .k91-tag-filter:hover{border-color:var(--k91-accent);color:var(--k91-accent);}
+  .k91-tag-filter.is-active{background:var(--k91-accent-soft);color:var(--k91-accent);border-color:rgba(50,230,160,.5);}
+  .k91-sort-note{font-size:12.5px;color:#6b7893;}
+
+  .k91-video-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .k91-video-card{
+    background:var(--k91-surface);
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius);
+    overflow:hidden;
+    transition:transform .25s,border-color .25s,box-shadow .25s;
+    display:flex;flex-direction:column;
+  }
+  .k91-video-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(50,230,160,.5);
+    box-shadow:0 16px 36px rgba(0,0,0,.5);
+  }
+  .k91-video-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;}
+  .k91-video-thumb svg{width:100%;height:100%;transition:transform .4s;}
+  .k91-video-card:hover .k91-video-thumb svg{transform:scale(1.05);}
+  .k91-video-thumb .k91-thumb-tag{
+    position:absolute;top:10px;left:10px;
+    font-size:11px;font-weight:700;
+    background:rgba(7,12,18,.72);
+    border:1px solid rgba(255,255,255,.16);
+    color:var(--k91-accent);
+    padding:3px 9px;border-radius:14px;
+    backdrop-filter:blur(4px);
+  }
+  .k91-video-thumb .k91-thumb-play{
+    position:absolute;top:50%;left:50%;
+    width:44px;height:44px;border-radius:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(50,230,160,.88);
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;transition:opacity .25s;
+  }
+  .k91-video-card:hover .k91-thumb-play{opacity:1;}
+  .k91-thumb-play::after{
+    content:"";width:0;height:0;
+    border-left:11px solid #04130d;
+    border-top:7px solid transparent;
+    border-bottom:7px solid transparent;
+    margin-left:3px;
+  }
+  .k91-video-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:9px;flex:1;}
+  .k91-video-body h3{font-size:15.5px;font-weight:700;line-height:1.45;}
+  .k91-video-desc{font-size:12.8px;color:var(--k91-text-muted);line-height:1.6;}
+  .k91-video-meta{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-top:auto;padding-top:10px;
+    border-top:1px solid rgba(255,255,255,.05);
+    font-size:12px;color:#7e8ba4;
+  }
+  .k91-video-author{display:flex;align-items:center;gap:7px;}
+  .k91-avatar{
+    width:26px;height:26px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:11.5px;font-weight:800;color:#071018;flex:none;
+  }
+  .k91-avatar--a{background:linear-gradient(135deg,#32e6a0,#1f9e6f);}
+  .k91-avatar--b{background:linear-gradient(135deg,#ffb86b,#ff7a59);}
+  .k91-avatar--c{background:linear-gradient(135deg,#7c9dff,#a86bff);}
+  .k91-avatar--d{background:linear-gradient(135deg,#3ad0ff,#2f8fff);}
+  .k91-avatar--e{background:linear-gradient(135deg,#ff8fb1,#c46bff);}
+  .k91-avatar--f{background:linear-gradient(135deg,#ffd166,#f4a261);}
+  .k91-video-actions{display:flex;gap:4px;}
+  .k91-icon-btn{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:12px;color:#8a97b0;
+    padding:5px 9px;border-radius:8px;
+    transition:.2s;
+  }
+  .k91-icon-btn:hover{background:var(--k91-accent-soft);color:var(--k91-accent);}
+  .k91-icon-btn.is-liked{color:var(--k91-accent);}
+  .k91-icon-btn.is-collected{color:#ffb86b;}
+  .k91-icon-btn svg{width:14px;height:14px;}
+
+  /* ============ 专题企划 ============ */
+  .k91-topic-list{display:flex;flex-direction:column;gap:18px;}
+  .k91-topic-item{
+    display:grid;grid-template-columns:250px 1fr auto;
+    gap:24px;align-items:center;
+    background:var(--k91-surface);
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius);
+    padding:14px;
+    transition:border-color .25s,transform .25s;
+  }
+  .k91-topic-item:hover{border-color:rgba(50,230,160,.45);transform:translateX(4px);}
+  .k91-topic-cover{
+    border-radius:var(--k91-radius-sm);overflow:hidden;aspect-ratio:16/9;
+    border:1px solid rgba(255,255,255,.06);
+  }
+  .k91-topic-cover svg{width:100%;height:100%;}
+  .k91-topic-info h3{font-size:17px;font-weight:800;margin-bottom:7px;}
+  .k91-topic-info p{font-size:13px;color:var(--k91-text-muted);max-width:560px;}
+  .k91-topic-status{
+    display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+    flex:none;
+  }
+  .k91-status-pill{
+    font-size:11.5px;font-weight:700;
+    padding:4px 12px;border-radius:20px;
+    white-space:nowrap;
+  }
+  .k91-status-pill.live{background:rgba(50,230,160,.14);color:var(--k91-accent);border:1px solid rgba(50,230,160,.35);}
+  .k91-status-pill.soon{background:rgba(255,184,107,.12);color:#ffb86b;border:1px solid rgba(255,184,107,.3);}
+  .k91-status-pill.done{background:rgba(124,157,255,.12);color:#9db5ff;border:1px solid rgba(124,157,255,.3);}
+  .k91-topic-arrow{font-size:20px;color:#5c6a84;}
+
+  /* ============ 创作者矩阵 ============ */
+  .k91-creator-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+  .k91-creator-card{
+    background:linear-gradient(180deg,var(--k91-surface),var(--k91-bg-soft));
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius);
+    padding:26px 20px 22px;
+    text-align:center;
+    transition:transform .25s,border-color .25s;
+  }
+  .k91-creator-card:hover{transform:translateY(-6px);border-color:rgba(50,230,160,.5);}
+  .k91-creator-avatar{
+    width:72px;height:72px;border-radius:50%;
+    margin:0 auto 14px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:26px;font-weight:900;color:#06101c;
+    box-shadow:0 0 0 4px rgba(255,255,255,.04);
+  }
+  .k91-creator-card h3{font-size:16px;font-weight:800;margin-bottom:4px;}
+  .k91-creator-field{font-size:12px;color:var(--k91-accent);letter-spacing:.5px;margin-bottom:10px;}
+  .k91-creator-bio{font-size:12.5px;color:var(--k91-text-muted);line-height:1.6;min-height:58px;}
+  .k91-creator-nums{
+    display:flex;justify-content:center;gap:18px;
+    margin-top:14px;padding-top:14px;
+    border-top:1px solid rgba(255,255,255,.06);
+    font-size:12px;color:#7e8ba4;
+  }
+  .k91-creator-nums b{color:var(--k91-text);font-weight:800;display:block;font-size:15px;}
+  .k91-creator-more{
+    display:block;margin-top:16px;
+    font-size:12.5px;color:var(--k91-accent);
+    border:1px solid rgba(50,230,160,.35);
+    border-radius:20px;padding:7px 0;
+    transition:.2s;
+  }
+  .k91-creator-more:hover{background:var(--k91-accent-soft);}
+
+  /* ============ 用户评价 ============ */
+  .k91-review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .k91-review-card{
+    background:var(--k91-bg-soft);
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius);
+    padding:22px;
+    position:relative;
+    transition:transform .25s,border-color .25s;
+  }
+  .k91-review-card:hover{transform:translateY(-4px);border-color:rgba(50,230,160,.4);}
+  .k91-review-stars{color:#ffb86b;font-size:13px;letter-spacing:2px;margin-bottom:12px;}
+  .k91-review-text{font-size:13.5px;color:#c3cee1;line-height:1.75;}
+  .k91-review-user{
+    display:flex;align-items:center;gap:10px;
+    margin-top:18px;padding-top:14px;
+    border-top:1px solid rgba(255,255,255,.06);
+  }
+  .k91-review-user .k91-avatar{width:32px;height:32px;font-size:13px;}
+  .k91-review-user p{font-size:12px;line-height:1.4;color:#7e8ba4;}
+  .k91-review-user p b{display:block;color:var(--k91-text);font-size:13px;}
+
+  /* ============ 投稿指南 / 灵感 ============ */
+  .k91-submit-wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  }
+  .k91-panel{
+    background:var(--k91-surface);
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius);
+    padding:30px;
+  }
+  .k91-panel h3{font-size:19px;font-weight:800;margin-bottom:8px;}
+  .k91-panel > p{font-size:13.5px;color:var(--k91-text-muted);margin-bottom:20px;}
+  .k91-step-list{display:flex;flex-direction:column;gap:16px;}
+  .k91-step{display:flex;gap:14px;}
+  .k91-step-num{
+    width:30px;height:30px;border-radius:50%;flex:none;
+    background:var(--k91-accent-soft);
+    border:1px solid rgba(50,230,160,.4);
+    color:var(--k91-accent);
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:800;
+  }
+  .k91-step h4{font-size:14px;font-weight:700;margin-bottom:3px;}
+  .k91-step p{font-size:12.5px;color:var(--k91-text-muted);line-height:1.6;}
+  .k91-idea-tags{display:flex;flex-wrap:wrap;gap:10px;}
+  .k91-idea-tag{
+    font-size:12.5px;
+    padding:8px 15px;border-radius:20px;
+    background:var(--k91-bg);
+    border:1px dashed rgba(50,230,160,.35);
+    color:#b9e6d2;
+    transition:.2s;
+  }
+  .k91-idea-tag:hover{background:var(--k91-accent-soft);color:var(--k91-accent);border-style:solid;}
+  .k91-submit-cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;}
+
+  /* ============ FAQ ============ */
+  .k91-faq-list{display:flex;flex-direction:column;gap:12px;max-width:900px;}
+  .k91-faq-item{
+    background:var(--k91-surface);
+    border:1px solid var(--k91-border);
+    border-radius:var(--k91-radius-sm);
+    overflow:hidden;
+  }
+  .k91-faq-item summary{
+    list-style:none;cursor:pointer;
+    padding:17px 22px;
+    font-size:14.5px;font-weight:700;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    transition:color .2s;
+  }
+  .k91-faq-item summary::-webkit-details-marker{display:none;}
+  .k91-faq-item summary::after{
+    content:"+";font-size:20px;font-weight:400;
+    color:var(--k91-accent);flex:none;transition:transform .25s;
+  }
+  .k91-faq-item[open] summary::after{transform:rotate(45deg);}
+  .k91-faq-item summary:hover{color:var(--k91-accent);}
+  .k91-faq-body{
+    padding:0 22px 18px;
+    font-size:13.5px;color:var(--k91-text-muted);line-height:1.8;
+  }
+
+  /* ============ 页脚 ============ */
+  .k91-footer{
+    background:#070a10;
+    border-top:1px solid var(--k91-border);
+    padding:56px 0 30px;
+  }
+  .k91-footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+  }
+  .k91-footer-brand p{font-size:13px;color:var(--k91-text-muted);line-height:1.8;margin-top:16px;max-width:300px;}
+  .k91-footer h4{font-size:13.5px;font-weight:800;margin-bottom:16px;letter-spacing:.5px;}
+  .k91-footer-links{display:flex;flex-direction:column;gap:10px;}
+  .k91-footer-links a{font-size:13px;color:var(--k91-text-muted);transition:color .2s;}
+  .k91-footer-links a:hover{color:var(--k91-accent);}
+  .k91-footer-bottom{
+    margin-top:44px;padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.06);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+    font-size:12px;color:#5f6c85;
+  }
+
+  /* ============ Toast / 弹窗 ============ */
+  .k91-toast{
+    position:fixed;left:50%;bottom:34px;
+    transform:translate(-50%,20px);
+    background:var(--k91-surface-2);
+    border:1px solid rgba(50,230,160,.4);
+    color:var(--k91-text);
+    font-size:13.5px;
+    padding:12px 24px;border-radius:30px;
+    box-shadow:var(--k91-shadow);
+    opacity:0;pointer-events:none;
+    transition:opacity .25s,transform .25s;
+    z-index:500;
+    white-space:nowrap;
+  }
+  .k91-toast.is-show{opacity:1;transform:translate(-50%,0);}
+
+  .k91-modal-mask{
+    position:fixed;inset:0;
+    background:rgba(3,6,10,.72);
+    backdrop-filter:blur(4px);
+    z-index:400;
+    display:none;align-items:center;justify-content:center;
+    padding:24px;
+  }
+  .k91-modal-mask.is-open{display:flex;}
+  .k91-modal{
+    width:100%;max-width:520px;
+    background:var(--k91-surface);
+    border:1px solid var(--k91-border);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:var(--k91-shadow);
+    max-height:86vh;overflow:auto;
+  }
+  .k91-modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px;}
+  .k91-modal-head h3{font-size:19px;}
+  .k91-modal-close{
+    width:34px;height:34px;border-radius:50%;
+    background:var(--k91-bg);border:1px solid var(--k91-border);
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;color:var(--k91-text-muted);flex:none;
+    transition:.2s;
+  }
+  .k91-modal-close:hover{color:var(--k91-accent);border-color:var(--k91-accent);}
+  .k91-modal p{font-size:13.5px;color:var(--k91-text-muted);line-height:1.7;}
+  .k91-modal-field{margin-top:16px;}
+  .k91-modal-field label{display:block;font-size:12.5px;color:var(--k91-text-muted);margin-bottom:6px;}
+  .k91-modal-field input,.k91-modal-field textarea{
+    width:100%;
+    background:var(--k91-bg);
+    border:1px solid var(--k91-border);
+    border-radius:10px;
+    color:var(--k91-text);
+    font-size:13.5px;
+    padding:11px 14px;
+    outline:none;
+    transition:border-color .2s;
+    resize:vertical;
+  }
+  .k91-modal-field input:focus,.k91-modal-field textarea:focus{border-color:var(--k91-accent);}
+  .k91-modal-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:22px;}
+  .k91-share-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .k91-share-btn{
+    padding:9px 18px;border-radius:24px;font-size:13px;
+    background:var(--k91-bg);border:1px solid var(--k91-border);
+    color:var(--k91-text-muted);transition:.2s;
+  }
+  .k91-share-btn:hover{border-color:var(--k91-accent);color:var(--k91-accent);}
+
+  /* ============ 回顶 ============ */
+  .k91-backtop{
+    position:fixed;right:26px;bottom:28px;
+    width:46px;height:46px;border-radius:50%;
+    background:var(--k91-surface-2);
+    border:1px solid var(--k91-border);
+    color:var(--k91-accent);
+    display:flex;align-items:center;justify-content:center;
+    font-size:19px;
+    opacity:0;pointer-events:none;transform:translateY(10px);
+    transition:.3s;z-index:300;
+  }
+  .k91-backtop.is-show{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .k91-backtop:hover{border-color:var(--k91-accent);}
+
+  /* ============ 响应式 ============ */
+  @media (max-width:1024px){
+    .k91-hero-inner{grid-template-columns:1fr;gap:40px;}
+    .k91-hero-stats{max-width:none;}
+    .k91-video-grid{grid-template-columns:repeat(2,1fr);}
+    .k91-creator-grid{grid-template-columns:repeat(2,1fr);}
+    .k91-review-grid{grid-template-columns:repeat(2,1fr);}
+    .k91-footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+    .k91-topic-item{grid-template-columns:200px 1fr auto;}
+    .k91-submit-wrap{grid-template-columns:1fr;}
+  }
+  @media (max-width:760px){
+    .k91-header-inner{height:64px;padding:0 16px;}
+    .k91-nav{display:none;}
+    .k91-nav-toggle{display:flex;}
+    .k91-header-tools .k91-search{display:none;}
+    .k91-section{padding:52px 0;}
+    .k91-video-grid{grid-template-columns:1fr;}
+    .k91-creator-grid{grid-template-columns:1fr;}
+    .k91-review-grid{grid-template-columns:1fr;}
+    .k91-topic-item{grid-template-columns:1fr;gap:14px;padding:16px;}
+    .k91-topic-status{flex-direction:row;align-items:center;justify-content:space-between;}
+    .k91-footer-grid{grid-template-columns:1fr;gap:28px;}
+    .k91-hero{padding:52px 0 48px;}
+    .k91-hero-float-card{position:static;margin-top:16px;max-width:none;}
+    .k91-announce-inner{padding:8px 16px;}
+    .k91-announce p{font-size:12px;}
+    .k91-modal{padding:22px;}
+    .k91-container{padding:0 16px;}
+    .k91-footer{padding:44px 0 26px;}
+    .k91-backtop{right:16px;bottom:16px;}
+  }
+  @media (max-width:480px){
+    .k91-hero-stats{grid-template-columns:1fr 1fr;}
+    .k91-hero-actions .k91-btn{width:100%;justify-content:center;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶区域：公告条 + 页头 -->
+<div class="k91-sticky-wrap">
+  <div class="k91-announce" role="note" aria-label="站点公告">
+    <div class="k91-announce-inner">
+      <span class="k91-announce-tag">新增</span>
+      <p>「城市观察者·2026影像企划」正式上线征集，首批12支原创短片已入库，创作者报名通道同步开启。</p>
+    </div>
+  </div>
+
+  <header class="k91-header" id="k91Header">
+    <div class="k91-header-inner">
+      <a href="#k91Hero" class="k91-brand" aria-label="91看官方网站首页">
+        <span class="k91-brand-logo">91</span>
+        <span>
+          <span class="k91-brand-name">91<em>看</em></span>
+          <span class="k91-brand-sub">VIDEO · COMMUNITY</span>
+        </span>
+      </a>
+
+      <nav class="k91-nav" aria-label="主导航">
+        <a href="#k91Hero" class="is-active">首页</a>
+        <a href="#k91Hot">热门视频</a>
+        <a href="#k91Topics">专题企划</a>
+        <a href="#k91Creators">创作者</a>
+        <a href="#k91Reviews">用户评价</a>
+        <a href="#k91Submit">投稿指南</a>
+        <a href="#k91Faq">帮助</a>
+      </nav>
+
+      <div class="k91-header-tools">
+        <div class="k91-search">
+          <input type="search" id="k91SearchInput" placeholder="搜索视频 / 创作者 / 话题" aria-label="站内搜索">
+          <button class="k91-search-btn" id="k91SearchBtn" type="button">搜索</button>
+        </div>
+        <button class="k91-nav-toggle" id="k91NavToggle" aria-label="展开导航菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="k91-mobile-nav" id="k91MobileNav">
+      <a href="#k91Hero">首页</a>
+      <a href="#k91Hot">热门视频</a>
+      <a href="#k91Topics">专题企划</a>
+      <a href="#k91Creators">创作者</a>
+      <a href="#k91Reviews">用户评价</a>
+      <a href="#k91Submit">投稿指南</a>
+      <a href="#k91Faq">帮助</a>
+    </div>
+    <div class="k91-container">
+      <div class="k91-search-feedback" id="k91SearchFeedback" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- ============ 首屏 ============ -->
+  <section class="k91-hero" id="k91Hero">
+    <div class="k91-container k91-hero-inner">
+      <div>
+        <div class="k91-hero-badge"><i></i> 91看 · 品牌官方网站</div>
+        <h1>91<span>看</span></h1>
+        <p class="k91-hero-lead">
+          91看是一个以真实、温暖、原创为底色的视频内容社区。作为持续运营的企业级视频品牌，我们为创作者提供稳定的上传与分发通道，为观众提供专业、高清、有品质的视听内容，让每一次观看都成为一次可信赖的相遇。
+        </p>
+        <div class="k91-hero-actions">
+          <a href="#k91Hot" class="k91-btn k91-btn-primary">浏览热门内容</a>
+          <a href="#k91Submit" class="k91-btn k91-btn-ghost">创作者投稿</a>
+          <button class="k91-btn k91-btn-ghost" type="button" id="k91ShareOpenHero">分享本页</button>
+        </div>
+        <div class="k91-hero-stats">
+          <div class="k91-stat"><strong data-k91-count="26800">26,800+</strong><span>原创视频作品</span></div>
+          <div class="k91-stat"><strong data-k91-count="3200">3,200+</strong><span>持续创作者</span></div>
+          <div class="k91-stat"><strong data-k91-count="1200000">1,200,000+</strong><span>社区月活跃用户</span></div>
+        </div>
+      </div>
+
+      <div class="k91-hero-visual">
+        <div class="k91-hero-figure">
+          <!-- 首屏主视觉：抽象城市夜景 + 视频元素 -->
+          <svg viewBox="0 0 640 400" role="img" aria-label="91看品牌首屏主视觉：夜色中的城市楼群与视频播放符号">
+            <defs>
+              <linearGradient id="k91HeroSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#0d1a2e"/>
+                <stop offset="1" stop-color="#122a3f"/>
+              </linearGradient>
+              <linearGradient id="k91HeroGlow" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#32e6a0" stop-opacity=".85"/>
+                <stop offset="1" stop-color="#3ad0ff" stop-opacity=".15"/>
+              </linearGradient>
+              <linearGradient id="k91HeroBldg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#21384f"/>
+                <stop offset="1" stop-color="#0e1c2c"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="400" fill="url(#k91HeroSky)"/>
+            <circle cx="510" cy="78" r="46" fill="#32e6a0" opacity=".18"/>
+            <circle cx="510" cy="78" r="26" fill="#32e6a0" opacity=".35"/>
+            <circle cx="110" cy="120" r="2.4" fill="#e8f5ff" opacity=".8"/>
+            <circle cx="170" cy="70" r="1.8" fill="#9fd9ff" opacity=".7"/>
+            <circle cx="250" cy="110" r="2" fill="#ffffff" opacity=".6"/>
+            <circle cx="360" cy="60" r="1.6" fill="#9fd9ff" opacity=".8"/>
+            <circle cx="580" cy="150" r="2" fill="#ffffff" opacity=".55"/>
+            <g fill="url(#k91HeroBldg)">
+              <rect x="30" y="210" width="70" height="190"/>
+              <rect x="110" y="160" width="56" height="240"/>
+              <rect x="180" y="235" width="82" height="165"/>
+              <rect x="278" y="130" width="64" height="270"/>
+              <rect x="356" y="196" width="92" height="204"/>
+              <rect x="464" y="150" width="58" height="250"/>
+              <rect x="536" y="222" width="78" height="178"/>
+            </g>
+            <g fill="#4df0b2" opacity=".55">
+              <rect x="46" y="226" width="10" height="8"/><rect x="64" y="248" width="10" height="8"/>
+              <rect x="46" y="278" width="10" height="8"/><rect x="80" y="300" width="10" height="8"/>
+              <rect x="124" y="186" width="10" height="8"/><rect x="146" y="212" width="10" height="8"/>
+              <rect x="124" y="268" width="10" height="8"/><rect x="200" y="258" width="10" height="8"/>
+              <rect x="228" y="290" width="10" height="8"/><rect x="294" y="158" width="10" height="8"/>
+              <rect x="314" y="196" width="10" height="8"/><rect x="294" y="262" width="10" height="8"/>
+              <rect x="374" y="222" width="10" height="8"/><rect x="404" y="258" width="10" height="8"/>
+              <rect x="478" y="176" width="10" height="8"/><rect x="500" y="214" width="10" height="8"/>
+              <rect x="556" y="248" width="10" height="8"/><rect x="582" y="286" width="10" height="8"/>
+            </g>
+            <rect x="60" y="330" width="520" height="3" fill="#32e6a0" opacity=".25"/>
+            <g transform="translate(280 138)">
+              <rect width="88" height="62" rx="14" fill="#0b1420" stroke="#32e6a0" stroke-opacity=".6"/>
+              <path d="M34 18 62 31 34 44Z" fill="#32e6a0"/>
+            </g>
+            <rect x="0" y="352" width="640" height="48" fill="#0a1420" opacity=".7"/>
+          </svg>
+          <div class="k91-play-badge" aria-hidden="true"></div>
+          <div class="k91-cover-overlay">
+            <strong>「城市观察者」首支原创短片</strong>
+            <small>91看官方发布 · 2026 秋季影像企划</small>
+          </div>
+        </div>
+        <div class="k91-hero-float-card">
+          <div class="k91-mini-avatar">林</div>
+          <p><b> Lin 的作品入选焦点</b>创作者林野的新作已进入本期「焦点推荐」</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 热门视频流 ============ -->
+  <section class="k91-section" id="k91Hot">
+    <div class="k91-container">
+      <div class="k91-section-head">
+        <div class="k91-eyebrow">Hot Videos</div>
+        <h2>热门视频流 · 91看社区精选</h2>
+        <p>从日常记录到深度访谈，从城市探索到手作教程，91看的创作者用镜头记录真实生活。以下内容由官方编辑推荐与社区热度共同产生，品质与口碑兼顾。</p>
+      </div>
+
+      <div class="k91-filter-row">
+        <div class="k91-tags" id="k91TagFilters">
+          <button type="button" class="k91-tag-filter is-active" data-k91-filter="all">全部</button>
+          <button type="button" class="k91-tag-filter" data-k91-filter="记录">日常记录</button>
+          <button type="button" class="k91-tag-filter" data-k91-filter="城市">城市探索</button>
+          <button type="button" class="k91-tag-filter" data-k91-filter="手作">手作 DIY</button>
+          <button type="button" class="k91-tag-filter" data-k91-filter="访谈">人物访谈</button>
+          <button type="button" class="k91-tag-filter" data-k91-filter="科普">知识科普</button>
+        </div>
+        <span class="k91-sort-note">按编辑推荐排序 · 持续更新</span>
+      </div>
+
+      <div class="k91-video-grid" id="k91VideoGrid">
+
+        <!-- 卡片 1 -->
+        <article class="k91-video-card" data-k91-cat="记录">
+          <div class="k91-video-thumb">
+            <svg viewBox="0 0 480 270" role="img" aria-label="清晨厨房的窗边光线与一杯手冲咖啡的视频封面">
+              <defs>
+                <linearGradient id="k91c1bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f0e2c8"/><stop offset="1" stop-color="#d9b98c"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="url(#k91c1bg)"/>
+              <rect x="0" y="0" width="180" height="270" fill="#fff3dd" opacity=".45"/>
+              <circle cx="360" cy="70" r="52" fill="#ffd99b" opacity=".55"/>
+              <rect x="245" y="130" width="110" height="90" rx="14" fill="#7a5638"/>
+              <rect x="262" y="106" width="76" height="34" rx="10" fill="#c9925e"/>
+              <rect x="300" y="60" width="6" height="52" fill="#5b3e28"/>
+              <path d="M258 150h84" stroke="#f3e2c6" stroke-width="4" opacity=".6"/>
+              <path d="M70 210c30-22 70-22 100 0" stroke="#8c6b47" stroke-width="6" fill="none" opacity=".5"/>
+            </svg>
+            <span class="k91-thumb-tag">日常记录</span>
+            <span class="k91-thumb-play" aria-hidden="true"></span>
+          </div>
+          <div class="k91-video-body">
+            <h3>一个人的清晨厨房：手冲咖啡与窗边早餐</h3>
+            <p class="k91-video-desc">记录上班前 40 分钟的独处时光，从磨豆到注水，慢慢把一天打开。</p>
+            <div class="k91-video-meta">
+              <div class="k91-video-author">
+                <span class="k91-avatar k91-avatar--a">早</span>
+                <span>早起十分钟</span>
+              </div>
+              <div class="k91-video-actions">
+                <button type="button" class="k91-icon-btn" data-k91-like aria-label="点赞">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 8a2 2 0 0 1-2 1.6H7"/></svg>
+                  <span data-k91-like-count>1.8k</span>
+                </button>
+                <button type="button" class="k91-icon-btn" data-k91-collect aria-label="收藏">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.6l6.3-.8Z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 卡片 2 -->
+        <article class="k91-video-card" data-k91-cat="城市">
+          <div class="k91-video-thumb">
+            <svg viewBox="0 0 480 270" role="img" aria-label="雨夜老街霓虹倒影的城市探索视频封面">
+              <defs>
+                <linearGradient id="k91c2bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#0f2338"/><stop offset="1" stop-color="#1d3a57"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="url(#k91c2bg)"/>
+              <g fill="#254866" opacity=".9">
+                <rect x="20" y="40" width="70" height="200"/><rect x="110" y="90" width="54" height="150"/>
+                <rect x="190" y="20" width="80" height="220"/><rect x="300" y="70" width="62" height="170"/>
+                <rect x="384" y="30" width="76" height="210"/>
+              </g>
+              <g fill="#ffcf6e">
+                <rect x="36" y="60" width="10" height="10"/><rect x="60" y="92" width="10" height="10"/>
+                <rect x="122" y="112" width="8" height="8"/><rect x="210" y="42" width="10" height="10"/>
+                <rect x="236" y="70" width="10" height="10"/><rect x="206" y="120" width="10" height="10"/>
+                <rect x="318" y="92" width="8" height="8"/><rect x="400" y="54" width="10" height="10"/>
+                <rect x="424" y="96" width="10" height="10"/>
+              </g>
+              <rect x="0" y="212" width="480" height="58" fill="#0a1726"/>
+              <g stroke="#ffd58a" stroke-width="2" opacity=".5">
+                <path d="M60 214v34M170 214v40M280 214v30M390 214v38"/>
+              </g>
+              <rect x="0" y="212" width="480" height="58" fill="url(#k91c2bg)" opacity=".35"/>
+              <circle cx="240" cy="150" r="3" fill="#8fd2ff"/>
+            </svg>
+            <span class="k91-thumb-tag">城市探索</span>
+            <span class="k91-thumb-play" aria-hidden="true"></span>
+          </div>
+          <div class="k91-video-body">
+            <h3>雨夜老街：霓虹灯下的城市记忆</h3>
+            <p class="k91-video-desc">跟随镜头走进老街巷，寻找那些即将消失的招牌与手艺人。</p>
+            <div class="k91-video-meta">
+              <div class="k91-video-author">
+                <span class="k91-avatar k91-avatar--d">城</span>
+                <span>城市观察者</span>
+              </div>
+              <div class="k91-video-actions">
+                <button type="button" class="k91-icon-btn" data-k91-like aria-label="点赞">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 8a2 2 0 0 1-2 1.6H7"/></svg>
+                  <span data-k91-like-count>3.2k</span>
+                </button>
+                <button type="button" class="k91-icon-btn" data-k91-collect aria-label="收藏">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.6l6.3-.8Z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 卡片 3 -->
+        <article class="k91-video-card" data-k91-cat="手作">
+          <div class="k91-video-thumb">
+            <svg viewBox="0 0 480 270" role="img" aria-label="木质工作台上手工木勺与刻刀的手作视频封面">
+              <defs>
+                <linearGradient id="k91c3bg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#3d2b1c"/><stop offset="1" stop-color="#5a3e26"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="url(#k91c3bg)"/>
+              <rect x="0" y="180" width="480" height="90" fill="#2c1e12"/>
+              <ellipse cx="180" cy="185" rx="140" ry="22" fill="#6d4b2e" opacity=".6"/>
+              <path d="M120 170c20-46 84-62 140-34 20 10 26 30 10 42-24 18-70 20-110 6-26-9-48-8-40-14Z" fill="#c99a5b"/>
+              <path d="M140 158c28-18 76-22 108-6" stroke="#e9c48f" stroke-width="5" fill="none" opacity=".7"/>
+              <rect x="318" y="86" width="14" height="110" rx="6" fill="#d8dbe2" transform="rotate(14 325 141)"/>
+              <rect x="330" y="76" width="42" height="10" rx="5" fill="#aeb6c2" transform="rotate(14 351 81)"/>
+              <circle cx="388" cy="200" r="26" fill="none" stroke="#f0cf9a" stroke-width="3" opacity=".5"/>
+            </svg>
+            <span class="k91-thumb-tag">手作 DIY</span>
+            <span class="k91-thumb-play" aria-hidden="true"></span>
+          </div>
+          <div class="k91-video-body">
+            <h3>从一块木料到一把木勺：手作全过程</h3>
+            <p class="k91-video-desc">完整记录选料、画线、凿削与打磨，适合零基础第一次尝试木作的人。</p>
+            <div class="k91-video-meta">
+              <div class="k91-video-author">
+                <span class="k91-avatar k91-avatar--f">木</span>
+                <span>木作小馆</span>
+              </div>
+              <div class="k91-video-actions">
+                <button type="button" class="k91-icon-btn" data-k91-like aria-label="点赞">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 8a2 2 0 0 1-2 1.6H7"/></svg>
+                  <span data-k91-like-count>980</span>
+                </button>
+                <button type="button" class="k91-icon-btn" data-k91-collect aria-label="收藏">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.6l6.3-.8Z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 卡片 4 -->
+        <article class="k91-video-card" data-k91-cat="访谈">
+          <div class="k91-video-thumb">
+            <svg viewBox="0 0 480 270" role="img" aria-label="两位创作者在暖光下对谈的人物访谈视频封面">
+              <defs>
+                <linearGradient id="k91c4bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1b1626"/><stop offset="1" stop-color="#2c1f38"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="url(#k91c4bg)"/>
+              <circle cx="140" cy="124" r="46" fill="#e7a9c9" opacity=".8"/>
+              <circle cx="330" cy="124" r="46" fill="#8fa9f0" opacity=".8"/>
+              <path d="M60 270c8-56 50-82 80-82s72 26 80 82Z" fill="#c783a9" opacity=".85"/>
+              <path d="M250 270c8-56 50-82 80-82s72 26 80 82Z" fill="#6d86cf" opacity=".85"/>
+              <rect x="208" y="70" width="64" height="40" rx="10" fill="#0e0a16" opacity=".85"/>
+              <path d="M230 82h20v16h-20z" fill="#ffd9ec"/>
+              <path d="M150 156h180" stroke="#f4d7e8" stroke-width="2" opacity=".4"/>
+            </svg>
+            <span class="k91-thumb-tag">人物访谈</span>
+            <span class="k91-thumb-play" aria-hidden="true"></span>
+          </div>
+          <div class="k91-video-body">
+            <h3>对话：当创作者决定拍自己的城市</h3>
+            <p class="k91-video-desc">两位长期记录城市生活的创作者，聊了聊选题、耐心与镜头里的真实。</p>
+            <div class="k91-video-meta">
+              <div class="k91-video-author">
+                <span class="k91-avatar k91-avatar--c">访</span>
+                <span>91看访谈间</span>
+              </div>
+              <div class="k91-video-actions">
+                <button type="button" class="k91-icon-btn" data-k91-like aria-label="点赞">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 8a2 2 0 0 1-2 1.6H7"/></svg>
+                  <span data-k91-like-count>2.5k</span>
+                </button>
+                <button type="button" class="k91-icon-btn" data-k91-collect aria-label="收藏">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.6l6.3-.8Z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 卡片 5 -->
+        <article class="k91-video-card" data-k91-cat="科普">
+          <div class="k91-video-thumb">
+            <svg viewBox="0 0 480 270" role="img" aria-label="星空与天文望远镜的知识科普视频封面">
+              <defs>
+                <linearGradient id="k91c5bg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#060d1c"/><stop offset="1" stop-color="#132642"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="url(#k91c5bg)"/>
+              <g fill="#ffffff">
+                <circle cx="60" cy="50" r="2"/><circle cx="140" cy="30" r="1.6"/><circle cx="220" cy="70" r="2.2"/>
+                <circle cx="300" cy="40" r="1.5"/><circle cx="380" cy="80" r="2"/><circle cx="440" cy="36" r="1.7"/>
+                <circle cx="100" cy="120" r="1.4"/><circle cx="340" cy="120" r="1.8"/><circle cx="420" cy="150" r="1.5"/>
+              </g>
+              <circle cx="380" cy="66" r="30" fill="#8fd2ff" opacity=".16"/>
+              <circle cx="380" cy="66" r="14" fill="#8fd2ff" opacity=".5"/>
+              <path d="M220 210 280 120l14 8-52 88Z" fill="#cdd8ea"/>
+              <rect x="180" y="208" width="80" height="10" rx="5" fill="#9fb0c9"/>
+              <rect x="196" y="218" width="48" height="34" rx="6" fill="#6c82a3"/>
+              <path d="M0 240c60-26 140-26 200 0s140 26 280 0v30H0Z" fill="#0a1830" opacity=".9"/>
+            </svg>
+            <span class="k91-thumb-tag">知识科普</span>
+            <span class="k91-thumb-play" aria-hidden="true"></span>
+          </div>
+          <div class="k91-video-body">
+            <h3>肉眼可见的四季星空：一份入门观测指南</h3>
+            <p class="k91-video-desc">不用专业设备，从辨认三颗亮星开始，重新认识头顶这片天空。</p>
+            <div class="k91-video-meta">
+              <div class="k91-video-author">
+                <span class="k91-avatar k91-avatar--b">星</span>
+                <span>夜空笔记</span>
+              </div>
+              <div class="k91-video-actions">
+                <button type="button" class="k91-icon-btn" data-k91-like aria-label="点赞">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 8a2 2 0 0 1-2 1.6H7"/></svg>
+                  <span data-k91-like-count>4.1k</span>
+                </button>
+                <button type="button" class="k91-icon-btn" data-k91-collect aria-label="收藏">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.6l6.3-.8Z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 卡片 6 -->
+        <article class="k91-video-card" data-k91-cat="记录">
+          <div class="k91-video-thumb">
+            <svg viewBox="0 0 480 270" role="img" aria-label="周末阳台植物与洒水壶的日常记录视频封面">
+              <defs>
+                <linearGradient id="k91c6bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#dcefe0"/><stop offset="1" stop-color="#a9cfae"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="270" fill="url(#k91c6bg)"/>
+              <rect x="0" y="196" width="480" height="74" fill="#8fb894"/>
+              <g fill="#518a5d">
+                <path d="M96 200c0-42 22-70 52-70-4 34-22 62-52 70Z"/>
+                <path d="M130 200c-2-36 14-62 40-66-2 30-16 56-40 66Z" opacity=".8"/>
+                <path d="M286 200c0-50 28-80 62-80-6 40-28 70-62 80Z"/>
+                <path d="M330 200c0-34 16-58 40-62-2 28-16 52-40 62Z" opacity=".75"/>
+              </g>
+              <rect x="176" y="150" width="34" height="50" rx="6" fill="#6b7f75"/>
+              <path d="M204 158c18-10 36-6 44 6" stroke="#6b7f75" stroke-width="6" fill="none"/>
+              <ellipse cx="246" cy="206" rx="46" ry="10" fill="#6f9a76" opacity=".7"/>
+              <circle cx="420" cy="58" r="30" fill="#fff6d8" opacity=".8"/>
+            </svg>
+            <span class="k91-thumb-tag">日常记录</span>
+            <span class="k91-thumb-play" aria-hidden="true"></span>
+          </div>
+          <div class="k91-video-body">
+            <h3>周末阳台改造：把三平米变成小花园</h3>
+            <p class="k91-video-desc">低成本、可复制的阳台植物布置，附一份新手养护清单。</p>
+            <div class="k91-video-meta">
+              <div class="k91-video-author">
+                <span class="k91-avatar k91-avatar--a">绿</span>
+                <span>绿意生活</span>
+              </div>
+              <div class="k91-video-actions">
+                <button type="button" class="k91-icon-btn" data-k91-like aria-label="点赞">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3Zm0 0 4-7a2 2 0 0 1 2 2v4h5a2 2 0 0 1 2 2l-1.5 8a2 2 0 0 1-2 1.6H7"/></svg>
+                  <span data-k91-like-count>1.4k</span>
+                </button>
+                <button type="button" class="k91-icon-btn" data-k91-collect aria-label="收藏">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.7 5.8 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3.1 1.2-6.2L3 9.6l6.3-.8Z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 专题企划 ============ -->
+  <section class="k91-section" id="k91Topics">
+    <div class="k91-container">
+      <div class="k91-section-head">
+        <div class="k91-eyebrow">Special Projects</div>
+        <h2>专题企划 · 有主题的持续创作</h2>
+        <p>91看每年会围绕城市、生活与创作发起多个专题企划。我们相信，好的内容需要被组织起来，也需要被更多人看见。</p>
+      </div>
+
+      <div class="k91-topic-list">
+
+        <article class="k91-topic-item">
+          <div class="k91-topic-cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="城市观察者专题企划封面：天际线与镜头">
+              <defs><linearGradient id="k91t1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16324a"/><stop offset="1" stop-color="#2a5876"/></linearGradient></defs>
+              <rect width="320" height="180" fill="url(#k91t1)"/>
+              <g fill="#0e2334"><rect x="18" y="70" width="42" height="110"/><rect x="70" y="42" width="34" height="138"/><rect x="112" y="88" width="50" height="92"/><rect x="172" y="30" width="40" height="150"/><rect x="220" y="64" width="36" height="116"/><rect x="264" y="96" width="42" height="84"/></g>
+              <g fill="#4dd6ff" opacity=".6"><rect x="30" y="84" width="6" height="6"/><rect x="80" y="56" width="6" height="6"/><rect x="126" y="102" width="6" height="6"/><rect x="186" y="46" width="6" height="6"/><rect x="232" y="78" width="6" height="6"/></g>
+              <circle cx="252" cy="44" r="16" fill="#ffd88a" opacity=".8"/>
+              <path d="M0 164h320" stroke="#4dd6ff" stroke-width="2" opacity=".4"/>
+            </svg>
+          </div>
+          <div class="k91-topic-info">
+            <h3>城市观察者 · 2026 影像企划</h3>
+            <p>面向所有城市记录者，征集关于街巷、人群与日常变迁的原创短片。目前已上线 12 支作品，投稿通道持续开放。</p>
+          </div>
+          <div class="k91-topic-status">
+            <span class="k91-status-pill live">征集中</span>
+            <span class="k91-topic-arrow" aria-hidden="true">→</span>
+          </div>
+        </article>
+
+        <article class="k91-topic-item">
+          <div class="k91-topic-cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="手艺人的一天专题企划封面：工作台与工具">
+              <defs><linearGradient id="k91t2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2618"/><stop offset="1" stop-color="#5e3f28"/></linearGradient></defs>
+              <rect width="320" height="180" fill="url(#k91t2)"/>
+              <rect x="0" y="120" width="320" height="60" fill="#2a1b10"/>
+              <path d="M60 120c14-30 70-44 112-26 18 8 24 26 6 36-34 18-96 16-118 4Z" fill="#d6a566"/>
+              <rect x="222" y="40" width="10" height="86" rx="5" fill="#e3e7ee"/>
+              <rect x="232" y="30" width="32" height="9" rx="4" fill="#b9c0cc"/>
+              <circle cx="140" cy="52" r="24" fill="none" stroke="#f2c68b" stroke-width="3" opacity=".6"/>
+              <path d="M16 120h288" stroke="#f2c68b" stroke-width="2" opacity=".35"/>
+            </svg>
+          </div>
+          <div class="k91-topic-info">
+            <h3>手艺人的一天 · 纪实短片</h3>
+            <p>拜访木作、陶艺、织染等不同领域的手艺人，用影像留存那些缓慢而专注的日常。已更新 8 集。</p>
+          </div>
+          <div class="k91-topic-status">
+            <span class="k91-status-pill done">已完结</span>
+            <span class="k91-topic-arrow" aria-hidden="true">→</span>
+          </div>
+        </article>
+
+        <article class="k91-topic-item">
+          <div class="k91-topic-cover">
+            <svg viewBox="0 0 320 180" role="img" aria-label="深夜书房专题企划封面：书架与阅读灯">
+              <defs><linearGradient id="k91t3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c1a2e"/><stop offset="1" stop-color="#332a4a"/></linearGradient></defs>
+              <rect width="320" height="180" fill="url(#k91t3)"/>
+              <g fill="#4b4068"><rect x="28" y="40" width="10" height="140"/><rect x="80" y="40" width="10" height="140"/><rect x="132" y="40" width="10" height="140"/></g>
+              <g fill="#8b7bb5"><rect x="42" y="60" width="34" height="50"/><rect x="94" y="52" width="34" height="50"/><rect x="146" y="72" width="34" height="50"/></g>
+              <rect x="220" y="86" width="70" height="10" rx="4" fill="#f2d18b"/>
+              <path d="M246 96v52" stroke="#f2d18b" stroke-width="6"/>
+              <ellipse cx="252" cy="148" rx="46" ry="8" fill="#f2d18b" opacity=".18"/>
+              <circle cx="270" cy="42" r="20" fill="#f2d18b" opacity=".22"/>
+            </svg>
+          </div>
+          <div class="k91-topic-info">
+            <h3>深夜书房 · 创作者 Q&amp;A</h3>
+            <p>每期邀请一位创作者，聊聊镜头之外的阅读、思考与工作方法。新一期将在 12 月上线。</p>
+          </div>
+          <div class="k91-topic-status">
+            <span class="k91-status-pill soon">预告中</span>
+            <span class="k91-topic-arrow" aria-hidden="true">→</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 创作者矩阵 ============ -->
+  <section class="k91-section" id="k91Creators">
+    <div class="k91-container">
+      <div class="k91-section-head">
+        <div class="k91-eyebrow">Creators</div>
+        <h2>创作者矩阵 · 与 91 看一起成长</h2>
+        <p>每一位创作者都是91看内容生态中重要的一部分。我们为创作者提供成长支持、版权保护与稳定分发，也欢迎更多新面孔加入。</p>
+      </div>
+
+      <div class="k91-creator-grid">
+
+        <article class="k91-creator-card">
+          <div class="k91-creator-avatar k91-avatar--a">林</div>
+          <h3>林野</h3>
+          <div class="k91-creator-field">城市影像 / 纪实</div>
+          <p class="k91-creator-bio">用镜头记录城市边缘的日常，擅长在普通街巷里捕捉有温度的故事。</p>
+          <div class="k91-creator-nums">
+            <span><b>86</b>作品</span>
+            <span><b>4.2w</b>关注</span>
+          </div>
+          <button type="button" class="k91-creator-more" data-k91-creator="林野">查看档案</button>
+        </article>
+
+        <article class="k91-creator-card">
+          <div class="k91-creator-avatar k91-avatar--b">苏</div>
+          <h3>苏晓禾</h3>
+          <div class="k91-creator-field">手作 / 生活方式</div>
+          <p class="k91-creator-bio">陶艺与编织爱好者，把工作室的慢节奏拍成可以跟着做的教程。</p>
+          <div class="k91-creator-nums">
+            <span><b>52</b>作品</span>
+            <span><b>2.7w</b>关注</span>
+          </div>
+          <button type="button" class="k91-creator-more" data-k91-creator="苏晓禾">查看档案</button>
+        </article>
+
+        <article class="k91-creator-card">
+          <div class="k91-creator-avatar k91-avatar--c">陈</div>
+          <h3>陈默</h3>
+          <div class="k91-creator-field">人物访谈 / 声音</div>
+          <p class="k91-creator-bio">前电台编辑，习惯把对话放慢，相信好问题比答案更重要。</p>
+          <div class="k91-creator-nums">
+            <span><b>41</b>作品</span>
+            <span><b>3.5w</b>关注</span>
+          </div>
+          <button type="button" class="k91-creator-more" data-k91-creator="陈默">查看档案</button>
+        </article>
+
+        <article class="k91-creator-card">
+          <div class="k91-creator-avatar k91-avatar--e">许</div>
+          <h3>许一川</h3>
+          <div class="k91-creator-field">自然 / 徒步</div>
+          <p class="k91-creator-bio">常年行走在山野之间，视频里很少说话，但总能让人安静下来。</p>
+          <div class="k91-creator-nums">
+            <span><b>63</b>作品</span>
+            <span><b>5.8w</b>关注</span>
+          </div>
+          <button type="button" class="k91-creator-more" data-k91-creator="许一川">查看档案</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 用户评价 ============ -->
+  <section class="k91-section" id="k91Reviews">
+    <div class="k91-container">
+      <div class="k91-section-head">
+        <div class="k91-eyebrow">Community Voice</div>
+        <h2>用户评价 · 来自社区的真实声音</h2>
+        <p>91看珍惜每一条反馈。以下评价来自长期使用社区的用户与创作者，涵盖内容、体验与社区氛围。</p>
+      </div>
+
+      <div class="k91-review-grid">
+
+        <article class="k91-review-card">
+          <div class="k91-review-stars">★★★★★</div>
+          <p class="k91-review-text">“在91看追更《城市观察者》已经半年了，选题很稳，画面也干净。最难得的是没有那种吵闹的剪辑，适合安静地看完。”</p>
+          <div class="k91-review-user">
+            <span class="k91-avatar k91-avatar--d">周</span>
+            <p><b>周小满</b>社区用户 · 3 年</p>
+          </div>
+        </article>
+
+        <article class="k91-review-card">
+          <div class="k91-review-stars">★★★★☆</div>
+          <p class="k91-review-text">“作为创作者，最直接的感受是上传流程省心，审核反馈也很清楚。希望以后能增加更多剪辑模板。”</p>
+          <div class="k91-review-user">
+            <span class="k91-avatar k91-avatar--a">阿</span>
+            <p><b>阿苍</b>独立创作者</p>
+          </div>
+        </article>
+
+        <article class="k91-review-card">
+          <div class="k91-review-stars">★★★★★</div>
+          <p class="k91-review-text">“手作教程那一栏真的很实用，跟着视频做出了第一把木勺，成就感拉满。评论区大家还会互相分享工具清单。”</p>
+          <div class="k91-review-user">
+            <span class="k91-avatar k91-avatar--f">李</span>
+            <p><b>李拾一</b>手作爱好者</p>
+          </div>
+        </article>
+
+        <article class="k91-review-card">
+          <div class="k91-review-stars">★★★★☆</div>
+          <p class="k91-review-text">“画质和音质都很稳定，加载速度也快。如果专题页能再加一个收藏夹功能，对我来说就完美了。”</p>
+          <div class="k91-review-user">
+            <span class="k91-avatar k91-avatar--c">孟</span>
+            <p><b>孟然</b>长期用户 · 2 年</p>
+          </div>
+        </article>
+
+        <article class="k91-review-card">
+          <div class="k91-review-stars">★★★★★</div>
+          <p class="k91-review-text">“喜欢这里不追热点，很多内容是可以隔一段时间再翻出来看的。深夜书房那期访谈我来回听了三遍。”</p>
+          <div class="k91-review-user">
+            <span class="k91-avatar k91-avatar--b">韩</span>
+            <p><b>韩小舟</b>播客听众</p>
+          </div>
+        </article>
+
+        <article class="k91-review-card">
+          <div class="k91-review-stars">★★★★☆</div>
+          <p class="k91-review-text">“整体氛围比较友好，举报和反馈入口也明显。希望创作者主页可以展示更多系列内容，方便一次看完。”</p>
+          <div class="k91-review-user">
+            <span class="k91-avatar k91-avatar--e">顾</span>
+            <p><b>顾屿</b>新注册用户</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 投稿指南 + 创作灵感 ============ -->
+  <section class="k91-section" id="k91Submit">
+    <div class="k91-container">
+      <div class="k91-section-head">
+        <div class="k91-eyebrow">Create &amp; Submit</div>
+        <h2>投稿指南 · 与 91 看一起创作</h2>
+        <p>无论你是第一次上传作品，还是已经持续创作多年的作者，91看都希望把流程做得更清楚一点，把支持做得更实一点。</p>
+      </div>
+
+      <div class="k91-submit-wrap">
+        <div class="k91-panel">
+          <h3>四步完成投稿</h3>
+          <p>从注册到发布，平均 15 分钟即可完成第一次投稿。</p>
+          <div class="k91-step-list">
+            <div class="k91-step">
+              <div class="k91-step-num">1</div>
+              <div><h4>注册创作者账号</h4><p>使用手机号或邮箱注册，完善创作者昵称与擅长领域，即可解锁上传入口。</p></div>
+            </div>
+            <div class="k91-step">
+              <div class="k91-step-num">2</div>
+              <div><h4>准备视频与封面</h4><p>支持 1080P 及以上高清画质，建议同时准备 16:9 封面图与 80 字以内简介。</p></div>
+            </div>
+            <div class="k91-step">
+              <div class="k91-step-num">3</div>
+              <div><h4>上传并填写信息</h4><p>选择内容分类与话题标签，勾选原创声明，便于编辑推荐与系统分发。</p></div>
+            </div>
+            <div class="k91-step">
+              <div class="k91-step-num">4</div>
+              <div><h4>等待审核与发布</h4><p>通常在 24 小时内完成审核，通过后会收到站内通知，并进入内容生态推荐池。</p></div>
+            </div>
+          </div>
+          <div class="k91-submit-cta">
+            <button type="button" class="k91-btn k91-btn-primary" id="k91SubmitModalBtn">进入投稿通道</button>
+            <button type="button" class="k91-btn k91-btn-ghost" id="k91GuideModalBtn">查看投稿规范</button>
+          </div>
+        </div>
+
+        <div class="k91-panel">
+          <h3>创作灵感 · 本周推荐方向</h3>
+          <p>结合近期社区热度与专题排期，以下方向更容易获得编辑推荐。</p>
+          <div class="k91-idea-tags">
+            <span class="k91-idea-tag"># 城市清晨的第一班公交</span>
+            <span class="k91-idea-tag"># 我家窗台上的四季</span>
+            <span class="k91-idea-tag"># 一件旧物的修复记录</span>
+            <span class="k91-idea-tag"># 街角小店的一天</span>
+            <span class="k91-idea-tag"># 通勤路上的 15 分钟</span>
+            <span class="k91-idea-tag"># 从零学一门手艺</span>
+            <span class="k91-idea-tag"># 城市声音采集计划</span>
+            <span class="k91-idea-tag"># 与长辈的一次对话</span>
+          </div>
+          <div style="margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);">
+            <p style="font-size:13px;color:var(--k91-text-muted);line-height:1.8;">
+              91看鼓励真实、原创、有细节的表达。我们更看重内容是否真诚，而不是设备是否昂贵。每月我们会从新投稿中挑选 10 支作品，进入「新作者推荐」专区，并给予流量支持与官方推荐位曝光。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="k91-section" id="k91Faq">
+    <div class="k91-container">
+      <div class="k91-section-head">
+        <div class="k91-eyebrow">Help Center</div>
+        <h2>常见问题 · 关于 91 看</h2>
+        <p>这里汇总了创作者与用户最常问的问题。如果没有找到答案，欢迎通过页脚的联系方式与我们沟通。</p>
+      </div>
+
+      <div class="k91-faq-list">
+        <details class="k91-faq-item" open>
+          <summary>91看是一个什么样的平台？</summary>
+          <div class="k91-faq-body">91看是面向创作者与观众的视频内容社区，属于企业级品牌官方网站。我们专注于真实、原创、有品质的影像内容，提供上传、分发、互动与成长支持，并通过专题企划与编辑推荐帮助优质内容被更多人看见。</div>
+        </details>
+        <details class="k91-faq-item">
+          <summary>如何成为91看的创作者？</summary>
+          <div class="k91-faq-body">注册账号后进入「创作者中心」，完善昵称、简介与擅长领域即可申请。审核通过后即可上传作品，首次投稿建议先阅读投稿规范，确保内容为原创且画质清晰。</div>
+        </details>
+        <details class="k91-faq-item">
+          <summary>投稿后多久可以通过审核？</summary>
+          <div class="k91-faq-body">常规审核时间为 24 小时内，节假日可能略有延迟。若内容涉及版权证明或特殊题材，审核团队会通过站内信联系你补充材料。</div>
+        </details>
+        <details class="k91-faq-item">
+          <summary>平台对视频画质有什么要求？</summary>
+          <div class="k91-faq-body">建议上传 1080P 及以上分辨率，画面比例 16:9，音频清晰无明显底噪。我们支持常见视频编码格式，上传过程中会自动进行转码与压缩优化。</div>
+        </details>
+        <details class="k91-faq-item">
+          <summary>作品被推荐到首页有什么标准？</summary>
+          <div class="k91-faq-body">编辑推荐会综合考虑内容的原创性、完成度、叙事清晰度以及社区反馈。专题企划相关投稿、首次投稿以及真实生活记录类内容会获得额外关注。</div>
+        </details>
+        <details class="k91-faq-item">
+          <summary>如何反馈问题或举报不当内容？</summary>
+          <div class="k91-faq-body">每个内容页面都提供反馈入口，也可以直接通过页脚邮箱联系我们。请在反馈中尽量附上页面链接、问题描述与截图，便于团队快速跟进处理。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="k91-footer">
+  <div class="k91-container">
+    <div class="k91-footer-grid">
+      <div class="k91-footer-brand">
+        <a href="#k91Hero" class="k91-brand" aria-label="返回91看官方网站首页">
+          <span class="k91-brand-logo">91</span>
+          <span>
+            <span class="k91-brand-name">91<em>看</em></span>
+            <span class="k91-brand-sub">VIDEO · COMMUNITY</span>
+          </span>
+        </a>
+        <p>91看官方网站，持续运营的视频内容社区。我们深耕垂直影像领域，以专业与匠心服务创作者，坚持正版、高清、原创的内容标准，努力成为用户首选的影像社区。</p>
+      </div>
+
+      <div>
+        <h4>站内导航</h4>
+        <div class="k91-footer-links">
+          <a href="#k91Hot">热门视频</a>
+          <a href="#k91Topics">专题企划</a>
+          <a href="#k91Creators">创作者矩阵</a>
+          <a href="#k91Reviews">用户评价</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>创作者服务</h4>
+        <div class="k91-footer-links">
+          <a href="#k91Submit">投稿指南</a>
+          <a href="#k91Faq">常见问题</a>
+          <a href="#k91Submit" data-k91-open-submit>上传作品</a>
+          <a href="#k91Faq">版权说明</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>联系我们</h4>
+        <div class="k91-footer-links">
+          <a href="mailto:hello@91kan.example" data-k91-copy="hello@91kan.example">合作邮箱</a>
+          <a href="#k91Faq">内容反馈</a>
+          <a href="#k91Submit">创作者入驻</a>
+          <a href="#k91Hero">回到首页</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="k91-footer-bottom">
+      <span>© 2026 91看 官方网站 · 版权所有 · 持续运营中</span>
+      <span>品牌故事 · 企业动态 · 官方发布 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="k91-backtop" id="k91BackTop" aria-label="回到顶部">↑</button>
+
+<!-- Toast -->
+<div class="k91-toast" id="k91Toast" role="status" aria-live="polite"></div>
+
+<!-- 分享弹窗 -->
+<div class="k91-modal-mask" id="k91ShareModal" role="dialog" aria-modal="true" aria-labelledby="k91ShareTitle">
+  <div class="k91-modal">
+    <div class="k91-modal-head">
+      <h3 id="k91ShareTitle">分享 91看</h3>
+      <button type="button" class="k91-modal-close" data-k91-close aria-label="关闭">×</button>
+    </div>
+    <p>把 91看的品牌主页分享给朋友，一起发现更多真实、原创的影像内容。</p>
+    <div class="k91-share-row">
+      <button type="button" class="k91-share-btn" data-k91-share="微信">微信</button>
+      <button type="button" class="k91-share-btn" data-k91-share="微博">微博</button>
+      <button type="button" class="k91-share-btn" data-k91-share="QQ">QQ</button>
+      <button type="button" class="k91-share-btn" data-k91-share="复制链接">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<!-- 创作者档案弹窗 -->
+<div class="k91-modal-mask" id="k91CreatorModal" role="dialog" aria-modal="true" aria-labelledby="k91CreatorModalTitle">
+  <div class="k91-modal">
+    <div class="k91-modal-head">
+      <h3 id="k91CreatorModalTitle">创作者档案</h3>
+      <button type="button" class="k91-modal-close" data-k91-close aria-label="关闭">×</button>
+    </div>
+    <div id="k91CreatorModalBody">
+      <p>正在加载创作者信息…</p>
+    </div>
+  </div>
+</div>
+
+<!-- 投稿弹窗 -->
+<div class="k91-modal-mask" id="k91SubmitModal" role="dialog" aria-modal="true" aria-labelledby="k91SubmitTitle">
+  <div class="k91-modal">
+    <div class="k91-modal-head">
+      <h3 id="k91SubmitTitle">进入投稿通道</h3>
+      <button type="button" class="k91-modal-close" data-k91-close aria-label="关闭">×</button>
+    </div>
+    <p>填写以下信息后，我们的编辑团队会在两个工作日内与你联系，并发送正式上传链接。</p>
+    <div class="k91-modal-field">
+      <label for="k91SubmitName">创作者昵称</label>
+      <input type="text" id="k91SubmitName" placeholder="请输入你的创作者昵称">
+    </div>
+    <div class="k91-modal-field">
+      <label for="k91SubmitContact">联系方式</label>
+      <input type="text" id="k91SubmitContact" placeholder="邮箱 / 手机号">
+    </div>
+    <div class="k91-modal-field">
+      <label for="k91SubmitIdea">作品方向简述</label>
+      <textarea id="k91SubmitIdea" rows="3" placeholder="例如：城市清晨纪实短片，约 5 分钟"></textarea>
+    </div>
+    <div class="k91-modal-actions">
+      <button type="button" class="k91-btn k91-btn-ghost" data-k91-close>取消</button>
+      <button type="button" class="k91-btn k91-btn-primary" id="k91SubmitConfirm">提交申请</button>
+    </div>
+  </div>
+</div>
+
+<!-- 投稿规范弹窗 -->
+<div class="k91-modal-mask" id="k91GuideModal" role="dialog" aria-modal="true" aria-labelledby="k91GuideTitle">
+  <div class="k91-modal">
+    <div class="k91-modal-head">
+      <h3 id="k91GuideTitle">投稿规范</h3>
+      <button type="button" class="k91-modal-close" data-k91-close aria-label="关闭">×</button>
+    </div>
+    <p>为保障社区内容品质与创作者权益，请在上传前确认以下事项：</p>
+    <div class="k91-modal-field">
+      <p style="font-size:13px;color:var(--k91-text-muted);line-height:1.9;">
+        1. 作品需为本人原创或已获得完整授权；<br>
+        2. 画面清晰、音画同步，建议 1080P 及以上；<br>
+        3. 封面需为 16:9 比例，不含明显水印或二维码；<br>
+        4. 内容不涉及侵权、虚假信息或违反法律法规；<br>
+        5. 91看保留对违规内容下架与账号处理的权利。
+      </p>
+    </div>
+    <div class="k91-modal-actions">
+      <button type="button" class="k91-btn k91-btn-primary" data-k91-close>我已了解</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ============ 工具函数 ============ */
+  var toastTimer = null;
+  function showToast(msg) {
+    var t = document.getElementById("k91Toast");
+    if (!t) return;
+    t.textContent = msg;
+    t.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      t.classList.remove("is-show");
+    }, 2200);
+  }
+
+  /* ============ 移动端导航 ============ */
+  var navToggle = document.getElementById("k91NavToggle");
+  var mobileNav = document.getElementById("k91MobileNav");
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener("click", function () {
+      var open = mobileNav.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    mobileNav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        mobileNav.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* ============ 搜索反馈 ============ */
+  var searchInput = document.getElementById("k91SearchInput");
+  var searchBtn = document.getElementById("k91SearchBtn");
+  var searchFeedback = document.getElementById("k91SearchFeedback");
+
+  function doSearch() {
+    if (!searchInput || !searchFeedback) return;
+    var kw = searchInput.value.trim();
+    if (!kw) {
+      searchFeedback.textContent = "请输入关键词后再试，例如「城市」「手作」「星空」。";
+      return;
+    }
+    var sample = ["城市观察者", "手冲咖啡", "木勺教程", "四季星空", "手艺人的一天"];
+    var pick = sample[Math.floor(Math.random() * sample.length)];
+    searchFeedback.textContent = "关于「" + kw + "」，为你找到相关推荐：" + pick + "。完整结果请登录后查看。";
+    showToast("已根据关键词刷新推荐");
+  }
+
+  if (searchBtn) searchBtn.addEventListener("click", doSearch);
+  if (searchInput) {
+    searchInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        doSearch();
+      }
+    });
+    searchInput.addEventListener("input", function () {
+      if (searchFeedback && searchInput.value.trim() === "") {
+        searchFeedback.textContent = "";
+      }
+    });
+  }
+
+  /* ============ 标签筛选 ============ */
+  var tagWrap = document.getElementById("k91TagFilters");
+  var videoGrid = document.getElementById("k91VideoGrid");
+  if (tagWrap && videoGrid) {
+    tagWrap.addEventListener("click", function (e) {
+      var btn = e.target.closest(".k91-tag-filter");
+      if (!btn) return;
+      tagWrap.querySelectorAll(".k91-tag-filter").forEach(function (b) {
+        b.classList.remove("is-active");
+      });
+      btn.classList.add("is-active");
+      var filter = btn.getAttribute("data-k91-filter");
+      var cards = videoGrid.querySelectorAll(".k91-video-card");
+      var shown = 0;
+      cards.forEach(function (card) {
+        var cat = card.getAttribute("data-k91-cat");
+        var match = filter === "all" || cat === filter;
+        card.style.display = match ? "" : "none";
+        if (match) shown++;
+      });
+      if (shown === 0) {
+        showToast("该分类暂无内容，试试其他标签");
+      }
+    });
+  }
+
+  /* ============ 点赞 / 收藏 ============ */
+  videoGrid.addEventListener("click", function (e) {
+    var likeBtn = e.target.closest("[data-k91-like]");
+    if (likeBtn) {
+      var countEl = likeBtn.querySelector("[data-k91-like-count]");
+      if (!countEl) return;
+      var raw = countEl.textContent.replace(/[^\d.]/g, "");
+      var num = parseFloat(raw);
+      if (isNaN(num)) num = 0;
+      var liked = likeBtn.classList.toggle("is-liked");
+      if (liked) {
+        num = num + 0.1;
+      } else {
+        num = Math.max(0, num - 0.1);
+      }
+      if (raw.indexOf("k") > -1) {
+        countEl.textContent = num.toFixed(1).replace(/\.0$/, "") + "k";
+      } else {
+        countEl.textContent = num.toFixed(1).replace(/\.0$/, "");
+      }
+      showToast(liked ? "已点赞，感谢支持" : "已取消点赞");
+      return;
+    }
+
+    var colBtn = e.target.closest("[data-k91-collect]");
+    if (colBtn) {
+      var on = colBtn.classList.toggle("is-collected");
+      showToast(on ? "已加入收藏" : "已取消收藏");
+    }
+  });
+
+  /* ============ 弹窗控制 ============ */
+  var modals = document.querySelectorAll(".k91-modal-mask");
+  function closeAllModals() {
+    modals.forEach(function (m) { m.classList.remove("is-open"); });
+  }
+  modals.forEach(function (mask) {
+    mask.addEventListener("click", function (e) {
+      if (e.target === mask) closeAllModals();
+    });
+    mask.querySelectorAll("[data-k91-close]").forEach(function (btn) {
+      btn.addEventListener("click", closeAllModals);
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeAllModals();
+  });
+
+  /* ============ 分享 ============ */
+  var shareModal = document.getElementById("k91ShareModal");
+  var heroShareBtn = document.getElementById("k91ShareOpenHero");
+  if (heroShareBtn) {
+    heroShareBtn.addEventListener("click", function () {
+      shareModal.classList.add("is-open");
+    });
+  }
+  document.querySelectorAll("[data-k91-share]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var type = btn.getAttribute("data-k91-share");
+      if (type === "复制链接") {
+        var url = "https://91kan.example/";
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () {
+            showToast("链接已复制");
+          }).catch(function () {
+            showToast("复制失败，请手动复制");
+          });
+        } else {
+          showToast("当前环境不支持自动复制");
+        }
+      } else {
+        showToast("已生成" + type + "分享卡片，请前往对应应用粘贴");
+      }
+    });
+  });
+
+  /* ============ 创作者档案弹窗 ============ */
+  var creatorModal = document.getElementById("k91CreatorModal");
+  var creatorBody = document.getElementById("k91CreatorModalBody");
+  var creatorTitle = document.getElementById("k91CreatorModalTitle");
+
+  var creatorData = {
+    "林野": {
+      field: "城市影像 / 纪实",
+      bio: "用镜头记录城市边缘的日常，擅长在普通街巷里捕捉有温度的故事。持续更新《城市观察者》系列，希望把城市的变化留在影像里。",
+      works: "86 件作品",
+      fans: "4.2 万关注"
+    },
+    "苏晓禾": {
+      field: "手作 / 生活方式",
+      bio: "陶艺与编织爱好者，把工作室的慢节奏拍成可以跟着做的教程。相信手作是一种让自己安静下来的方式。",
+      works: "52 件作品",
+      fans: "2.7 万关注"
+    },
+    "陈默": {
+      field: "人物访谈 / 声音",
+      bio: "前电台编辑，习惯把对话放慢，相信好问题比答案更重要。在91看主理《深夜书房》访谈系列。",
+      works: "41 件作品",
+      fans: "3.5 万关注"
+    },
+    "许一川": {
+      field: "自然 / 徒步",
+      bio: "常年行走在山野之间，视频里很少说话，但总能让人安静下来。希望更多人愿意走出家门，看看自然本来的样子。",
+      works: "63 件作品",
+      fans: "5.8 万关注"
+    }
+  };
+
+  document.querySelectorAll("[data-k91-creator]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var name = btn.getAttribute("data-k91-creator");
+      var data = creatorData[name];
+      if (!data) return;
+      creatorTitle.textContent = name + " · 创作者档案";
+      creatorBody.innerHTML =
+        '<p style="font-size:13px;color:var(--k91-accent);font-weight:700;margin-bottom:10px;">' + data.field + "</p>" +
+        '<p style="font-size:13.5px;color:var(--k91-text-muted);line-height:1.8;">' + data.bio + "</p>" +
+        '<div style="display:flex;gap:26px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);">' +
+        '<div style="font-size:12px;color:#7e8ba4;">作品<b style="display:block;font-size:17px;color:var(--k91-text);font-weight:800;">' + data.works + "</b></div>" +
+        '<div style="font-size:12px;color:#7e8ba4;">关注<b style="display:block;font-size:17px;color:var(--k91-text);font-weight:800;">' + data.fans + "</b></div>" +
+        "</div>";
+      creatorModal.classList.add("is-open");
+    });
+  });
+
+  /* ============ 投稿弹窗 ============ */
+  var submitModal = document.getElementById("k91SubmitModal");
+  var submitBtn = document.getElementById("k91SubmitModalBtn");
+  var guideBtn = document.getElementById("k91GuideModalBtn");
+  var guideModal = document.getElementById("k91GuideModal");
+  var submitConfirm = document.getElementById("k91SubmitConfirm");
+
+  if (submitBtn) submitBtn.addEventListener("click", function () { submitModal.classList.add("is-open"); });
+  if (guideBtn) guideBtn.addEventListener("click", function () { guideModal.classList.add("is-open"); });
+
+  document.querySelectorAll("[data-k91-open-submit]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      submitModal.classList.add("is-open");
+    });
+  });
+
+  if (submitConfirm) {
+    submitConfirm.addEventListener("click", function () {
+      var name = document.getElementById("k91SubmitName").value.trim();
+      var contact = document.getElementById("k91SubmitContact").value.trim();
+      if (!name || !contact) {
+        showToast("请填写昵称与联系方式");
+        return;
+      }
+      closeAllModals();
+      showToast("投稿申请已提交，编辑会尽快联系你");
+      document.getElementById("k91SubmitName").value = "";
+      document.getElementById("k91SubmitContact").value = "";
+      document.getElementById("k91SubmitIdea").value = "";
+    });
+  }
+
+  /* ============ 复制邮箱 ============ */
+  document.querySelectorAll("[data-k91-copy]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var text = el.getAttribute("data-k91-copy");
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          showToast("邮箱已复制：" + text);
+        }).catch(function () {
+          showToast("复制失败，请手动复制");
+        });
+      } else {
+        showToast("邮箱：" + text);
+      }
+    });
+  });
+
+  /* ============ 回到顶部 ============ */
+  var backTop = document.getElementById("k91BackTop");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 500) {
+      backTop.classList.add("is-show");
+    } else {
+      backTop.classList.remove("is-show");
+    }
+  });
+  backTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  /* ============ 数据数字滚动 ============ */
+  var counters = document.querySelectorAll("[data-k91-count]");
+  function animateCounter(el) {
+    if (el.getAttribute("data-k91-done") === "1") return;
+    el.setAttribute("data-k91-done", "1");
+    var target = parseInt(el.getAttribute("data-k91-count"), 10);
+    if (isNaN(target)) return;
+    var duration = 1200;
+    var startTime = null;
+    function step(ts) {
+      if (!startTime) startTime = ts;
+      var p = Math.min((ts - startTime) / duration, 1);
+      var val = Math.floor(p * target);
+      el.textContent = val.toLocaleString("zh-CN") + "+";
+      if (p < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target.toLocaleString("zh-CN") + "+";
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (c) { io.observe(c); });
+  } else {
+    counters.forEach(function (c) {
+      c.textContent = parseInt(c.getAttribute("data-k91-count"), 10).toLocaleString("zh-CN") + "+";
+    });
+  }
+
+  /* ============ 首屏浮动卡片间隔提示（互动感） ============ */
+  var floatCard = document.querySelector(".k91-hero-float-card");
+  if (floatCard) {
+    setTimeout(function () {
+      floatCard.style.transition = "transform .4s ease";
+      floatCard.style.transform = "translateY(-5px)";
+      setTimeout(function () {
+        floatCard.style.transform = "translateY(0)";
+      }, 500);
+    }, 2600);
+  }
+
+})();
+</script>
+</body>
+                </html>
